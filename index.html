@@ -24,8 +24,8 @@
         p { line-height: 1.6; font-size: 14px; }
         .character-img { width: 150px; height: auto; margin: 10px auto; border-radius: 10px; }
         .photo-gallery img { width: 100%; border-radius: 12px; margin-bottom: 15px; border: 2px solid #ffe066; display: block; }
-        .btn { background-color: #ffa500; color: white; border: none; padding: 12px 28px; font-size: 15px; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 10px; }
-        .spotify-embed { border-radius: 12px; margin: 15px 0; border: none; display: block; }
+        .btn { background-color: #ffa500; color: white; border: none; padding: 12px 28px; font-size: 15px; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 10px; display: inline-block; text-decoration: none; }
+        .btn-music { background-color: #1DB954; color: white; } /* Warna hijau khas Spotify */
         .envelope { background: #fff3cd; border: 2px dashed #ffa500; padding: 30px; border-radius: 15px; cursor: pointer; font-weight: bold; color: #d48800; }
         .hidden-message { display: none; background: #fffdf3; border-left: 5px solid #ffa500; padding: 15px; text-align: left; border-radius: 0 15px 15px 0; margin-top: 15px; }
     </style>
@@ -34,7 +34,7 @@
 
     <div class="container">
 
-        <!-- KARTU 1: Foto Utama Jura / Pompompurin -->
+        <!-- KARTU 1: Foto Utama -->
         <div class="card">
             <img class="character-img" src="pompom.jpg" alt="Foto Utama">
             <h1>Selamat Ulang Tahun</h1>
@@ -42,19 +42,24 @@
             <p>Klik tombol di bawah ini buat kejutan kecil selanjutnya! </p>
             <button class="btn" onclick="tampilkanPesan()">Lanjut!! ^w^</button>
             <div id="pesanKejutan" class="hidden-message">
-                <p>✨ Awh... Terima kasih sudah klik! jangan kaget ntar yak muehehhee Lanjut scroll ke bawah ya! 👇</p>
+                <p>✨ Awh... Terima kasih sudah klik! jan.gan kaget ntar yak muehehhee Lanjut scroll ke bawah ya! 👇</p>
             </div>
         </div>
 
-        <!-- KARTU 2: Musik Spotify (Sudah pakai link embed baru yang clean) -->
+        <!-- KARTU 2: Musik Alternatif (Tombol Spotify) -->
         <div class="card">
             <span style="font-size: 24px;">🎵</span>
             <p><i>Ini lagu yang selalu mengingatkanku padamu...</i></p>
-            <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/6Uen9vYgYfH7uS88wa6ZgG?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <p>Setiap kali mendengar lagu ini, gua selalu keinget ama lu .prenkk </p>
+            
+            <!-- Tombol pengganti kotak hitam error, langsung buka lagu Jatinangor -->
+            <a href="https://open.spotify.com/track/6Uen9vYgYfH7uS88wa6ZgG" target="_blank" class="btn btn-music">
+                🟢 Putar Lagu di Spotify
+            </a>
+            
+            <p style="margin-top: 15px;">Setiap kali mendengar lagu ini, gua selalu keinget ama lu .prenkk </p>
         </div>
 
-        <!-- KARTU 3: Galeri Foto (Fix Bersih 6 Foto, Tanpa Numpuk) -->
+        <!-- KARTU 3: Galeri 6 Foto -->
         <div class="card photo-gallery">
             <h3>Momen Kita 📸</h3>
             <img src="foto1.jpg" alt="Foto Kenangan 1">
@@ -66,7 +71,7 @@
             <p>Mau membukanya? *⁠(⁠(⁠*⁠^⁠ω⁠^⁠*⁠)⁠)⁠*</p>
         </div>
 
-        <!-- KARTU 4: Surat Cinta -->
+        <!-- KARTU 4: Surat -->
         <div class="card">
             <div class="envelope" onclick="bukaSurat()">
                 ✉️ Klik untuk Buka Surat 
@@ -93,4 +98,3 @@
     </script>
 </body>
 </html>
-

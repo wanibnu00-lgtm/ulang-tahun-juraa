@@ -24,8 +24,15 @@
         p { line-height: 1.6; font-size: 14px; }
         .character-img { width: 150px; height: auto; margin: 10px auto; border-radius: 10px; }
         .photo-gallery img { width: 100%; border-radius: 12px; margin-bottom: 15px; border: 2px solid #ffe066; display: block; }
-        .btn { background-color: #ffa500; color: white; border: none; padding: 12px 28px; font-size: 15px; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 10px; display: inline-block; text-decoration: none; }
-        .btn-music { background-color: #1DB954; color: white; } /* Warna hijau khas Spotify */
+        .btn { background-color: #ffa500; color: white; border: none; padding: 12px 28px; font-size: 15px; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 10px; display: inline-block; }
+        
+        /* Styling Pemutar Audio Bawaan */
+        audio {
+            width: 100%;
+            margin: 15px 0;
+            outline: none;
+        }
+        
         .envelope { background: #fff3cd; border: 2px dashed #ffa500; padding: 30px; border-radius: 15px; cursor: pointer; font-weight: bold; color: #d48800; }
         .hidden-message { display: none; background: #fffdf3; border-left: 5px solid #ffa500; padding: 15px; text-align: left; border-radius: 0 15px 15px 0; margin-top: 15px; }
     </style>
@@ -46,17 +53,18 @@
             </div>
         </div>
 
-        <!-- KARTU 2: Musik Alternatif (Tombol Spotify) -->
+        <!-- KARTU 2: Musik Player Internal (Anti Gagal) -->
         <div class="card">
             <span style="font-size: 24px;">🎵</span>
             <p><i>Ini lagu yang selalu mengingatkanku padamu...</i></p>
             
-            <!-- Tombol pengganti kotak hitam error, langsung buka lagu Jatinangor -->
-            <a href="https://open.spotify.com/track/6Uen9vYgYfH7uS88wa6ZgG" target="_blank" class="btn btn-music">
-                🟢 Putar Lagu di Spotify
-            </a>
+            <!-- Pemutar musik langsung menggunakan file lagu.mp3 yang lo upload -->
+            <audio controls>
+                <source src="lagu.mp3" type="audio/mpeg">
+                Browser lo nggak mendukung pemutar musik ini.
+            </audio>
             
-            <p style="margin-top: 15px;">Setiap kali mendengar lagu ini, gua selalu keinget ama lu .prenkk </p>
+            <p>Setiap kali mendengar lagu ini, gua selalu keinget ama lu .prenkk </p>
         </div>
 
         <!-- KARTU 3: Galeri 6 Foto -->
@@ -77,7 +85,7 @@
                 ✉️ Klik untuk Buka Surat 
             </div>
             <div id="isiSurat" class="hidden-message">
-                <p>Happy birthday juraaaaa Semoga lu selalu happy dan sehat ya. Di umur yang sekarang dan seterusnya, semoga Tuhan selalu jagain dan mudahin semua langkah lu .</p>
+                <p>Happy birthday juraaaaa Semoga lu selalu happy dan sehat ya. Di umur yang sekarang and seterusnya, semoga Tuhan selalu jagain dan mudahin semua langkah lu .</p>
                 <p>I hope all the dreams you’ve been fighting for finally come true. gua gasuka lihat lu sedih, jadi semoga hari spesial lu seseru dan seindah diri lu. Stay strong and keep being you!.</p>
                 <p>Aku bakal selalu support dan doain yang terbaik buat lu, not just today, but every day. I’m really glad I got to know you and so proud of everything you’ve achieved. Wishing you a year full of happiness, success, and lots of good memories. Happy birthday, enjoy your day!.</p>
                 <p>Selamat ulang tahun, juraaaa! 🍰🥳</p>

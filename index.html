@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday juraaaa </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://i.pinimg.com/736x/4c/ee/eb/4ceeebd0593d22300e8fbdb3e69b17ea.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #5c4033;
+        }
+        .container { max-width: 450px; width: 100%; display: flex; flex-direction: column; gap: 25px; }
+        .card { background: rgba(255, 255, 255, 0.95); border: 3px solid #ffcc00; border-radius: 20px; padding: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; box-sizing: border-box; }
+        h1 { color: #e6b800; margin-top: 10px; }
+        p { line-height: 1.6; font-size: 14px; }
+        .character-img { width: 150px; height: auto; margin: 10px auto; border-radius: 10px; }
+        .photo-gallery img { width: 100%; border-radius: 12px; margin-bottom: 15px; border: 2px solid #ffe066; display: block; }
+        .btn { background-color: #ffa500; color: white; border: none; padding: 12px 28px; font-size: 15px; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 10px; }
+        .spotify-embed { border-radius: 12px; margin: 15px 0; border: none; display: block; }
+        .envelope { background: #fff3cd; border: 2px dashed #ffa500; padding: 30px; border-radius: 15px; cursor: pointer; font-weight: bold; color: #d48800; }
+        .hidden-message { display: none; background: #fffdf3; border-left: 5px solid #ffa500; padding: 15px; text-align: left; border-radius: 0 15px 15px 0; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- KARTU 1: Foto Utama Jura / Pompompurin -->
+        <div class="card">
+            <img class="character-img" src="pompom.jpg" alt="Foto Utama">
+            <h1>Selamat Ulang Tahun</h1>
+            <p style="font-weight: bold; font-size: 16px;"> (｡♥‿♥｡)</p>
+            <p>Klik tombol di bawah ini buat kejutan kecil selanjutnya! </p>
+            <button class="btn" onclick="tampilkanPesan()">Lanjut!! ^w^</button>
+            <div id="pesanKejutan" class="hidden-message">
+                <p>✨ Awh... Terima kasih sudah klik! jangan kaget ntar yak muehehhee Lanjut scroll ke bawah ya! 👇</p>
+            </div>
+        </div>
+
+        <!-- KARTU 2: Musik Spotify (Sudah pakai link embed baru yang clean) -->
+        <div class="card">
+            <span style="font-size: 24px;">🎵</span>
+            <p><i>Ini lagu yang selalu mengingatkanku padamu...</i></p>
+            <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/6Uen9vYgYfH7uS88wa6ZgG" width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <p>Setiap kali mendengar lagu ini, gua selalu keinget ama lu .prenkk </p>
+        </div>
+
+        <!-- KARTU 3: Galeri Foto (Fix Bersih 6 Foto, Tanpa Numpuk) -->
+        <div class="card photo-gallery">
+            <h3>Momen Kita 📸</h3>
+            <img src="foto1.jpg" alt="Foto Kenangan 1">
+            <img src="foto2.jpg" alt="Foto Kenangan 2">
+            <img src="foto3.jpg" alt="Foto Kenangan 3">
+            <img src="foto4.jpg" alt="Foto Kenangan 4">
+            <img src="foto5.jpg" alt="Foto Kenangan 5">
+            <img src="foto6.jpg" alt="Foto Kenangan 6">
+            <p>Mau membukanya? *⁠(⁠(⁠*⁠^⁠ω⁠^⁠*⁠)⁠)⁠*</p>
+        </div>
+
+        <!-- KARTU 4: Surat Cinta -->
+        <div class="card">
+            <div class="envelope" onclick="bukaSurat()">
+                ✉️ Klik untuk Buka Surat 
+            </div>
+            <div id="isiSurat" class="hidden-message">
+                <p>Happy birthday juraaaaa Semoga lu selalu happy dan sehat ya. Di umur yang sekarang dan seterusnya, semoga Tuhan selalu jagain dan mudahin semua langkah lu .</p>
+                <p>I hope all the dreams you’ve been fighting for finally come true. gua gasuka lihat lu sedih, jadi semoga hari spesial lu seseru dan seindah diri lu. Stay strong and keep being you!.</p>
+                <p>Aku bakal selalu support dan doain yang terbaik buat lu, not just today, but every day. I’m really glad I got to know you and so proud of everything you’ve achieved. Wishing you a year full of happiness, success, and lots of good memories. Happy birthday, enjoy your day!.</p>
+                <p>Selamat ulang tahun, juraaaa! 🍰🥳</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function tampilkanPesan() {
+            var pesan = document.getElementById("pesanKejutan");
+            pesan.style.display = (pesan.style.display === "none" || pesan.style.display === "") ? "block" : "none";
+        }
+        function bukaSurat() {
+            var surat = document.getElementById("isiSurat");
+            surat.style.display = (surat.style.display === "none" || surat.style.display === "") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
+
